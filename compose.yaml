@@ -8,9 +8,10 @@
 # database or a cache. For examples, see the Awesome Compose repository:
 # https://github.com/docker/awesome-compose
 services:
-  server:
+  shima:
     build:
       context: .
+    container_name: shima-python
     ports:
       - 8050:8050
 

@@ -37,3 +37,7 @@ README.md
 **/htmlcov
 **/sessions
 **/test_data.*
+build
+dist
+*.egg-info
+htmlcov

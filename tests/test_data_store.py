@@ -8,7 +8,7 @@ import anndata as ad
 from pathlib import Path
 import shutil
 
-from masih.utils.data_store import DataStoreManager, save_adata, get_adata
+from shima.utils.data_store import DataStoreManager, save_adata, get_adata
 
 
 @pytest.fixture
@@ -127,7 +127,7 @@ def test_convenience_functions(sample_adata):
     assert loaded_adata.n_obs == sample_adata.n_obs
 
     # Cleanup
-    from masih.utils.data_store import data_store
+    from shima.utils.data_store import data_store
     data_store.delete_session(session_id)
 
 

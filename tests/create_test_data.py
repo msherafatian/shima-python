@@ -1,5 +1,5 @@
 """
-Create a small test AnnData object for testing MASIH.
+Create a small test AnnData object for testing SHIMA.
 """
 
 from scipy.sparse import csr_matrix
@@ -34,7 +34,7 @@ adata = ad.AnnData(X=X, obs=pd.DataFrame(index=obs_names),
 # Add some metadata
 adata.obs['sample'] = np.random.choice(['SampleA', 'SampleB'], n_obs)
 
-# DON'T add highly_variable column - let MASIH detect it
+# DON'T add highly_variable column - let SHIMA detect it
 
 # Save
 adata.write_h5ad('test_data.h5ad')

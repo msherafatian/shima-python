@@ -3,12 +3,13 @@ requires = ["setuptools>=65.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "masih-python"
-version = "0.1.0"
-description = "Modular Analysis Suite for Interactive Heterogeneity - Python/Dash Implementation"
+name = "shima-python"
+version = "1.0.1"
+description = "Single-cell Heterogeneity and Interactive Molecular Analysis - Python/Dash Implementation"
 readme = "README.md"
-requires-python = ">=3.10"
-license = {text = "GPL-3.0-or-later"}
+requires-python = ">=3.12"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
 authors = [
     {name = "Masih Sherafatian", email = "masihshrftn@gmail.com"}
 ]
@@ -16,10 +17,7 @@ keywords = ["single-cell", "RNA-seq", "bioinformatics", "visualization", "dash",
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
@@ -45,6 +43,19 @@ dependencies = [
     "tables>=3.8.0",
     "h5py>=3.9.0",
     "python-dateutil>=2.8.0",
+    "python-igraph>=0.10.0",
+    "leidenalg>=0.10.0",
+    "umap-learn>=0.5.0",
+    "networkx>=3.0",
+    "numba>=0.57.0",
+    "scikit-misc>=0.3.0",
+    "kaleido>=0.2.1",
+    "tqdm>=4.65.0",
+    "natsort>=8.4.0",
+    "gunicorn>=21.2.0",
+    "scvelo>=0.3.0",
+    "cellrank>=2.0.0",
+    "decoupler>=1.4.0",
 ]
 
 [project.optional-dependencies]
@@ -66,22 +77,27 @@ trajectory = [
 pathways = [
     "decoupler>=1.4.0",
 ]
+# Louvain generation is excluded on Python 3.12 because the package could
+# not be built reliably in the validated Python 3.12 environment.
+louvain = [
+    "louvain>=0.8.0; python_version < '3.12'",
+]
 all = [
-    "masih-python[dev,trajectory,pathways]",
+    "shima-python[dev,trajectory,pathways]",
 ]
 
 [project.urls]
-Homepage = "https://github.com/msherafatian/masih-python"
-Documentation = "https://github.com/msherafatian/masih-python/docs"
-Repository = "https://github.com/msherafatian/masih-python"
-"Bug Tracker" = "https://github.com/msherafatian/masih-python/issues"
-"R Version" = "https://github.com/msherafatian/masih"
+Homepage = "https://github.com/msherafatian/shima-python"
+Documentation = "https://github.com/msherafatian/shima-python#readme"
+Repository = "https://github.com/msherafatian/shima-python"
+"Bug Tracker" = "https://github.com/msherafatian/shima-python/issues"
+"R Version" = "https://github.com/msherafatian/shima"
 
-[tool.setuptools]
-packages = ["masih"]
+[tool.setuptools.packages.find]
+include = ["shima*", "masih*"]
 
 [tool.setuptools.package-data]
-masih = ["config/*.json", "assets/*", "data/gene_sets/*.gmt"]
+shima = ["config/*.json", "assets/*", "data/gene_sets/*.gmt"]
 
 [tool.black]
 line-length = 88
@@ -110,7 +126,7 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-addopts = "--cov=masih --cov-report=html --cov-report=term-missing --verbose"
+addopts = "--cov=shima --cov-report=html --cov-report=term-missing --verbose"
 
 [tool.mypy]
 python_version = "3.10"

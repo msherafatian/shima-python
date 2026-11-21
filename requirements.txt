@@ -21,7 +21,6 @@ statsmodels>=0.14.0
 # Clustering & Graph Algorithms (CRITICAL for scanpy)
 python-igraph>=0.10.0    # Required for leiden clustering
 leidenalg>=0.10.0        # Leiden algorithm implementation
-louvain>=0.8.0           # Louvain clustering (optional but useful)
 umap-learn>=0.5.0        # UMAP dimensionality reduction
 networkx>=3.0            # Graph algorithms (scanpy dependency)
 numba>=0.57.0            # Performance optimization (scanpy dependency)

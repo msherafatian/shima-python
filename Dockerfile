@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG PYTHON_VERSION=3.11.13
+ARG PYTHON_VERSION=3.12.16
 FROM python:${PYTHON_VERSION}-slim AS base
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -23,9 +23,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 # Copy the entire application
 COPY . .
 
-# If you want to install masih as a package (optional, only if you have pyproject.toml)
-# Uncomment the following line if you want the package installed in site-packages:
-# RUN pip install --no-cache-dir -e .
+# Install SHIMA as a package in the container
+RUN python -m pip install --no-cache-dir .
 # Create sessions directory with proper permissions
 RUN mkdir -p /app/sessions && \
     chown -R appuser:appuser /app && \

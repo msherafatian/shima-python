@@ -1,16 +1,16 @@
 """
-Docker entry point for MASIH.
+Docker entry point for SHIMA.
 
 This file is specifically for Docker/Gunicorn deployment.
-For development, use: python -m masih
+For development, use: python -m shima
 """
 
-from masih.app import app, server
+from shima.app import app, server
 
 # Expose server for gunicorn
 __all__ = ['app', 'server']
 
 if __name__ == "__main__":
     # For direct execution: python app.py
-    from masih.app import run_app
+    from shima.app import run_app
     run_app(debug=True)

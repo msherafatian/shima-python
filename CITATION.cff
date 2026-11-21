@@ -1,12 +1,10 @@
 cff-version: 1.2.0
-message: "If you use MASIH-Python in your work, please cite it using the metadata below."
-title: "MASIH-Python: Modular Analysis Suite for Interactive Heterogeneity"
+message: "If you use SHIMA-Python in your work, please cite it using the metadata below."
+title: "SHIMA-Python: Single-cell Heterogeneity and Interactive Molecular Analysis"
 type: software
-version: "0.1.0"
-doi: 10.5281/zenodo.17824054
-date-released: 2024-12-01
-repository-code: "https://github.com/msherafatian/masih-python"
-url: "https://doi.org/10.5281/zenodo.17824054"
+version: "1.0.1"
+repository-code: "https://github.com/msherafatian/shima-python"
+url: "https://github.com/msherafatian/shima-python"
 
 authors:
   - family-names: Sherafatian
@@ -14,12 +12,11 @@ authors:
     orcid: "https://orcid.org/0000-0002-2814-6036"
 
 abstract: >
-  MASIH-Python is a Python/Dash/Scanpy implementation of the MASIH framework
-  for comprehensive single-cell RNA sequencing analysis. It provides an
-  interactive web interface for high-resolution clustering, functional
-  pathway scoring (including CancerSEA), trajectory inference, and export of
-  publication-ready figures and data, maintaining architectural parity with
-  the original R/Shiny MASIH implementation.
+  SHIMA-Python is a Python/Dash/Scanpy implementation for interactive
+  single-cell RNA sequencing analysis. It provides quality control,
+  clustering, marker-gene analysis, functional pathway scoring, trajectory
+  inference, cell-cycle analysis, and export of publication-ready figures
+  and data.
 
 keywords:
   - single-cell RNA-seq
@@ -29,8 +26,9 @@ keywords:
   - tumor heterogeneity
   - Dash
   - Scanpy
-  - MASIH
-  - pseudotime
+  - SHIMA
+  - Louvain
+  - Leiden
   - CancerSEA
 
-license: GPL-3.0
+license: GPL-3.0-or-later

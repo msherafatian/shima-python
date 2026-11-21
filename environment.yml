@@ -1,11 +1,11 @@
-name: masih-python
+name: shima-python
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
   # Python version
-  - python>=3.10
+  - python>=3.12
 
   # Packages that conda handles better than pip
   # (especially python-igraph which can be tricky with pip on some systems)
