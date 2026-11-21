@@ -5,6 +5,7 @@
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/msherafatian/shima-python.svg)](https://github.com/msherafatian/shima-python/issues)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24409937.svg)](https://doi.org/10.5281/zenodo.24409937)
 
 SHIMA-Python is a Python/Dash/Scanpy implementation of SHIMA for interactive analysis of single-cell RNA sequencing (scRNA-seq) data. It provides quality control, clustering, marker-gene analysis, functional pathway scoring, trajectory analysis, cell-cycle analysis, interactive visualization, and data/plot export.
 
@@ -111,7 +112,32 @@ python -m build
 
 ## Citation
 
-SHIMA-Python version 1.0.1 does not yet have a new Zenodo DOI. The DOI should be registered and linked only after a Zenodo deposit is created.
+### General project citation
+
+Use the SHIMA-Python concept DOI for general citations of the project:
+
+- Concept DOI: <https://doi.org/10.5281/zenodo.24409937>
+- Record: <https://zenodo.org/records/24409938>
+
+### SHIMA-Python v1.0.1
+
+Use the version-specific DOI when citing this release:
+
+- Version DOI: <https://doi.org/10.5281/zenodo.24409938>
+- GitHub release: <https://github.com/msherafatian/shima-python/releases/tag/v1.0.1>
+
+BibTeX for SHIMA-Python v1.0.1:
+
+```bibtex
+@software{shima_python_1_0_1,
+  author = {Sherafatian, Masih},
+  title = {SHIMA-Python: Single-cell Heterogeneity and Interactive Molecular Analysis},
+  version = {1.0.1},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.24409938},
+  url = {https://doi.org/10.5281/zenodo.24409938}
+}
+```
 
 ### Historical MASIH-Python citation
 
